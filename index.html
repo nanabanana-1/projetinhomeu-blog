@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vicky's blog</title>
+    <link rel="icon" type="img/x-icon" href="logo-blog.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f6fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #16155ef8;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background: #3950b8;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #0001;
+            position: relative;
+        }
+        article {
+            margin-bottom: 32px;
+        }
+        article img {
+            max-width: 100%;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        audio {
+            width: 100%;
+            margin: 12px 0;
+        }
+        footer {
+            position:relative;
+            padding:0;
+            margin-top:40px;
+        }
+        footer div {
+            background:#16155ef8;
+            color:#fff;
+            text-align:center;
+            padding:32px 0 16px 0;
+            position:relative;
+            z-index:1;
+        }
+        footer div p {
+            margin:0;
+            font-size:1.1em;
+        }
+        footer div p:last-child {
+            margin-top:8px;
+            font-size:0.95em;
+        }
+        aside {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 220px;
+            height: 100%;
+            background: #90a8f7;
+            color: #16155ef8;
+            box-shadow: -2px 0 8px rgba(47, 68, 187, 0.133);
+            padding: 24px;
+            z-index: 100;
+            transform: translateX(100%);
+            transition: transform 0.3s;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        #aside-toggle:checked ~ main aside {
+            transform: translateX(0);
+        }
+        #aside-toggle:checked ~ main::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.333);
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="aside-toggle" style="display:none;">
+    <label for="aside-toggle" style="background:#5897df;color:#16155ef8;padding:8px 16px;border-radius:6px;cursor:pointer;font-weight:bold;position:fixed;top:24px;right:24px;z-index:101;">☰ Menu</label>
+    <header>
+        <h1>Meu Blogzinho</h1>
+        <p>Bem-vindo ao meu espaço na web!</p>
+    </header>
+    <nav>
+        <a href="inicio.html">Início</a>
+        <a href="playlist.html">Playlist</a>
+    </nav>
+    <main>
+        <article>
+            <h2>Primeiro Post</h2>
+            <img src="IMG-20251013-WA0046.jpeg" alt="Imagem do post">
+            <p>Hoje começo meu blogiznho guys! Aqui vou compartilhar ideias, fotos e músicas que gosto. (e receitasss)</p>
+        </article>
+        <article>
+            <h2>Segundo Post</h2>
+            <img src="a44b144c8860958b8c13bca6c36acc52.jpg" alt="Outra imagem">
+            <p>só mais um negocinho ne bebes</p>
+            <p>
+                aqui em baixo tem uma das minhas musicas favoritas!
+            </p>
+            <audio controls>
+                <source src="Candy.mp3" type="audio/mpeg">
+            </audio>
+        </article>
+        <audio id="musica" autoplay loop>
+  <source src="Creep (Cangaço Sessions, Vol. 2 Deluxe) (Acústico) [sxZiL3ycOgg].mp3" type="audio/mpeg">
+</audio>
+        <aside>
+    <h3 class="menu-title">Menu</h3>
+    <ul class="menu-links">
+     <li>
+        <a href="playlist.html">Minha playlist</a>
+     </li>
+      <li>
+        <a href="galeria.html">Minha galeria</a>
+     </li>
+      <li>
+        <a href="receitas.html">Minhas receitas</a>
+     </li>
+    </ul>
+</aside>
+    </main>
+    <footer style="position:relative;padding:0;margin-top:40px;">
+        <div style="position:absolute;top:-40px;left:0;width:100%;overflow:hidden;line-height:0;">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="display:block;width:100%;height:40px;">
+                <path d="M0,0V46.29c47.37,22,104.09,29.05,158,17.39C255.68,51.73,312.4,5.7,376,2.13c60.26-3.42,113.48,31.21,172,37.58,87.09,9.51,172.57-27.61,258-35.08C872.41-3.65,936.69,17.22,1000,35.5c66.09,19.38,132.18,27.61,200,27.61V0Z" fill="#16155ef8"></path>
+                <path d="M0,0V16.81c47.37,22,104.09,29.05,158,17.39C255.68,22.25,312.4-23.78,376-27.35c60.26-3.42,113.48,31.21,172,37.58,87.09,9.51,172.57-27.61,258-35.08C872.41-28.17,936.69-7.3,1000,10.98c66.09,19.38,132.18,27.61,200,27.61V0Z" fill="#5897df" opacity="0.6"></path>
+            </svg>
+        </div>
+        <div style="background:#16155ef8;color:#ffffff;text-align:center;padding:32px 0 16px 0;position:relative;z-index:1;">
+            <p style="margin:0;font-size:1.1em;">&copy; 2025 Meu Blogzinho. Todos os direitos reservados.</p>
+            <p style="margin:8px 0 0 0;font-size:0.95em;">Feito com carinho e café ☕</p>
+        </div>
+    </footer>
+</body>
+</html>
